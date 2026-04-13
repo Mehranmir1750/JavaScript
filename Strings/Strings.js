@@ -40,14 +40,6 @@ console.log(url.includes('mehran'));  // pata karo mehran ismai hai ya na
 
 console.log(gameName.split('-'));
 
-console.log(gameName.fontcolor('red'));
-
-
-
-
-
-
-
 
 
 
