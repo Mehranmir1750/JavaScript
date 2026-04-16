@@ -22,8 +22,22 @@ console.log(JsUser["full name"]); //can access full name only by this [] method 
 console.log(JsUser[mySym]);
 
 JsUser.email = "mehranmir@gmail.com"
-Object.freeze(JsUser)
+// Object.freeze(JsUser)
 JsUser.email = "mehranmir@google.com"
 console.log(JsUser);
+
+JsUser.greeting = function(){
+    console.log("Hello JS user");
+    
+}
+
+JsUser.greetingTwo = function(){
+    console.log(`Hello JS user, ${this.name}`);
+    
+}
+
+console.log(JsUser.greeting( ));
+console.log(JsUser.greetingTwo( ));
+
 
 
