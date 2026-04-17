@@ -18,7 +18,7 @@ const {courseInstructor: instructor} = course
 console.log(instructor);
 
 
-// APIs
+// APIs-> getting data from them in json format
 
 // {   // json format
 //     name:"mehran",
