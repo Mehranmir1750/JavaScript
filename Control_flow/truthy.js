@@ -30,4 +30,14 @@ val3 = undefined ?? 15
 
 console.log(val3);
 
+//Terniary Operator
+
+// conditipn ? true:false
+
+const iceTeaPrice = 100
+
+iceTeaPrice <=80 ? console.log("less than 80") : console.log("more than 80");
+
+
+
 
