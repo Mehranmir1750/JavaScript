@@ -13,3 +13,15 @@ for (let index = 0; index < 10; index++) {
     
     
 }
+
+
+for (let j = 0; j < 10; j++) {
+    console.log(`Outer loop value: ${j}`);
+
+    for (let k = 0; k < 10; k++) {
+        console.log(`Inner loop value: ${k}`);
+        
+    }
+    
+    
+}
