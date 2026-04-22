@@ -4,7 +4,7 @@ const newNums = myNumers.map( (num) => num+10 )
 console.log(newNums);
 
 
-//channing method => Method chaining means using more than one map() or filter() in sequence.
+//chaining method => Method chaining means using more than one map() or filter() in sequence.
 const newNums1 = myNumers
                  .map( (num) => num* 10)
                  .map( (num) => num + 1)
