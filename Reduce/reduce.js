@@ -7,3 +7,8 @@ const myTotal= myNums.reduce(function (accumulator, currentValue){
 }, 0)
 
 console.log(myTotal);
+
+
+const myTotal1 = myNums.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+
+console.log(myTotal1);
