@@ -9,7 +9,7 @@
     <h2>Amazing image</h2>
     <div>
         
-        <ul>
+        <ul id="images">
   <li>
     <img width="200px" id="photoshop" 
          src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" 
@@ -49,8 +49,44 @@
     //     alert("javascript clicked")
     // }
 
-    document.getElementById('javascript').addEventListener('click', function(){
-        alert("Javascipt clicked with evenListener")
-    }, false )  // 3rd parameter for true or false
+    // attachEvent()  => used during internet explorer
+
+    // document.getElementById('javascript').addEventListener('click', function(){
+    //     alert("Javascipt clicked with evenListener")
+    // }, false )  // 3rd parameter for true or false -> by default it is false => called as event propogation
+    // bubble mode and captured mode 
+    // bubble mode will go from down to top 
+    // and captured mode from top to down
+
+    // event object
+
+    // document.getElementById('javascript').addEventListener('click', function(e){
+    //     console.log(e);
+        
+    // },) 
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("Clicked inside the ul");
+        
+    // }, true )
+    
+    // document.getElementById('javascript').addEventListener('click', function(e){
+    //     console.log("Clicked javascript");
+    //     e.stopPropagation() // will not bubble to "Clicked inside the ul"
+        
+    // }, true )
+
+    // by false it is bubble mode means it will print clicked js first and then print clocked ul 
+    // but if we will keep it as true it will print clicked ul first and then print clicked javascript
+    // by using e.stopPropagation() // will not bubble to "Clicked inside the ul"
+
+
+    document.querySelector('#images').addEventListener('click',
+        function(e){
+            console.log(e.target.tagName);
+            
+            e.target.parentNode.remove()
+        }, false
+    )
 </script>
 </html>
