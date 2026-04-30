@@ -34,3 +34,16 @@ new Promise(function(resolve, reject){
     console.log("Async 2 resolved");
     
 })
+
+
+const promiseThree = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        resolve({username: "Mehran", email : "mehranmir@gmail.com"})
+    },3000)
+})
+
+promiseThree.then(function(user){
+    console.log(user);
+    
+
+})
