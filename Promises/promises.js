@@ -120,3 +120,33 @@ async function getAllUsers(){
 }
 
 getAllUsers()
+
+
+/* 
+
+
+🎯 Main Purpose of Promises
+
+👉 To handle asynchronous operations (tasks that don’t finish immediately) in a clean and controlled way.
+
+🧠 Why we even need Promises?
+
+JavaScript is single-threaded → it does one thing at a time.
+
+But some tasks take time:
+
+🌐 API requests
+📂 File reading
+🗄️ Database queries
+⏳ Timers
+
+👉 Without Promises, JS would get stuck waiting ❌
+
+⚡ What Promise does
+
+👉 It lets JavaScript say:
+
+“Start this task… I’ll continue other work… and when it finishes, I’ll handle the result.”
+
+
+*/
