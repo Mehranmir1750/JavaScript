@@ -149,4 +149,27 @@ But some tasks take time:
 “Start this task… I’ll continue other work… and when it finishes, I’ll handle the result.”
 
 
+
+
+fetch() is used to send and receive data from a server (API) asynchronously.
+
+Promise is used to handle async (time-taking) operations without blocking the program
+
+
+
+
+
+
+
+
+🧠 Perfect Explanation (remember this)
+
+👉 When you use fetch():
+
+It starts getting data from server
+It immediately returns a Promise
+JavaScript continues running other code
+When data arrives → Promise is resolved
+Then you handle it using .then() or await
+
 */
