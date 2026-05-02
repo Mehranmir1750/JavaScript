@@ -15,11 +15,11 @@
   <div class="level-score">
     <h3 class="level">Difficulty Level: Easy</h3>
     <h3 class="score">Score:0</h3>
-    <h3 class="timer"><b>Timer: 00:00</b></h3>
+    <h3 class="timer"><b>Timer: 60</b></h3>
   </div>
 
   <div class="question-body">
-    <h2 class="question"><em>Which of the following is used to select an element in JavaScript?</em></h2>
+    <h2 id ="question"><em></em></h2>
 
     <div class="options">
       <button class="option">getElementById()</button>
@@ -36,4 +36,226 @@
   </div>
   
 </body>
+
+<script>
+
+ const questions = [
+
+  // 🔬 Science
+  {
+    category: "Science",
+    question: "What is the chemical formula of sulfuric acid?",
+    options: ["H2SO3", "H2SO4", "HCl", "HNO3"],
+    answer: "H2SO4"
+  },
+
+  // ⚽ Sports
+  {
+    category: "Sports",
+    question: "Which country has won the most FIFA World Cups?",
+    options: ["Germany", "Argentina", "Brazil", "France"],
+    answer: "Brazil"
+  },
+
+  // 📘 English
+  {
+    category: "English",
+    question: "Choose the correct synonym of 'Meticulous':",
+    options: ["Careless", "Precise", "Lazy", "Rough"],
+    answer: "Precise"
+  },
+
+  // ➗ Maths
+  {
+    category: "Maths",
+    question: "What is the value of 12 × 8 + 6 ÷ 2?",
+    options: ["102", "99", "100", "96"],
+    answer: "99"
+  },
+
+  // ⚙️ Engineering
+  {
+    category: "Engineering",
+    question: "Which material is commonly used for making electrical wires?",
+    options: ["Iron", "Copper", "Aluminum", "Steel"],
+    answer: "Copper"
+  },
+
+  // 📜 History
+  {
+    category: "History",
+    question: "Who was the first Emperor of the Maurya Empire?",
+    options: ["Ashoka", "Chandragupta Maurya", "Bindusara", "Harsha"],
+    answer: "Chandragupta Maurya"
+  },
+
+  // 💻 Computer
+  {
+    category: "Computer",
+    question: "Which of the following is NOT a JavaScript data type?",
+    options: ["String", "Boolean", "Float", "Undefined"],
+    answer: "Float"
+  },
+
+  // 🧩 Aptitude
+  {
+    category: "Aptitude",
+    question: "If a train travels 60 km in 1 hour, how far will it travel in 2.5 hours?",
+    options: ["120 km", "150 km", "140 km", "130 km"],
+    answer: "150 km"
+  },
+
+  // 🌍 General Knowledge
+  {
+    category: "GK",
+    question: "Which is the largest ocean on Earth?",
+    options: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+    answer: "Pacific Ocean"
+  },
+
+  // 🧪 Science (logic)
+  {
+    category: "Science",
+    question: "Which gas is most abundant in Earth’s atmosphere?",
+    options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+    answer: "Nitrogen"
+  },
+
+  // 💡 Reasoning
+  {
+    category: "Aptitude",
+    question: "Find the next number in the series: 2, 6, 12, 20, ?",
+    options: ["28", "30", "26", "24"],
+    answer: "30"
+  },
+
+  // 🖥️ Computer (logic)
+  {
+    category: "Computer",
+    question: "What does 'HTTP' stand for?",
+    options: [
+      "Hyper Text Transfer Protocol",
+      "High Transfer Text Protocol",
+      "Hyperlink Transfer Process",
+      "Home Tool Transfer Protocol"
+    ],
+    answer: "Hyper Text Transfer Protocol"
+  },
+
+  // 📊 Maths (logic)
+  {
+    category: "Maths",
+    question: "If x = 3, what is the value of 2x² + 5?",
+    options: ["23", "21", "25", "19"],
+    answer: "23"
+  },
+
+  // 🏏 Sports (India context)
+  {
+    category: "Sports",
+    question: "Who is known as the 'God of Cricket'?",
+    options: ["Virat Kohli", "MS Dhoni", "Sachin Tendulkar", "Ricky Ponting"],
+    answer: "Sachin Tendulkar"
+  },
+
+  // 📖 English (grammar)
+  {
+    category: "English",
+    question: "Choose the correct sentence:",
+    options: [
+      "She don’t like coffee",
+      "She doesn’t likes coffee",
+      "She doesn’t like coffee",
+      "She not like coffee"
+    ],
+    answer: "She doesn’t like coffee"
+  }
+
+];
+
+
+
+const questionE1 = document.getElementById('question');
+const optionBtns = document.querySelectorAll(".option")
+
+
+let currentIndex = 0;
+
+function loadQuestion(){
+
+      const currentQuestion = quizQuestions[currentIndex]
+      console.log(currentQuestion);
+ 
+      questionE1.innerText = currentQuestion.question;
+
+
+      optionBtns.forEach((btn,index) => {
+      btn.innerText = currentQuestion.options[index];
+
+      });
+
+      timeTic()
+  
+
+    }
+
+
+
+
+function NextQuestion(){
+   currentIndex++;
+
+  if(currentIndex < quizQuestions.length){
+    loadQuestion();
+  } else {
+    // questionE1.innerText = "Quiz finished!";
+    document.getElementsByClassName("question-body").innerText = "Quiz Finished!"
+  }
+}
+
+
+
+
+
+
+
+function getQuestions(){
+  const shuffled = [...questions].sort(()=> Math.random() - 0.5);
+  return shuffled.slice(0,10)
+}
+
+const quizQuestions = getQuestions()
+
+console.log(quizQuestions);
+
+// const tictic = document.getElementsByClassName('timer');
+
+const tictic = document.querySelector('.timer');
+
+let time = 2;
+
+function timeTic(){
+// clearInterval(interval);
+  time = 5;
+  
+  const interval = setInterval(
+    ()=>{
+      tictic.innerText =  `Timer: ${time}`;
+      time --;
+
+      if (time < 0) {
+      clearInterval(interval);
+      // tictic.innerText = "Time's up!";
+      // loadQuestion()
+      NextQuestion()
+      
+  
+    }
+    },1000)
+}
+
+  loadQuestion()
+
+
+</script>
 </html>
