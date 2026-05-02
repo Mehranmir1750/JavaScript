@@ -1,0 +1,98 @@
+
+
+.body{
+    background-color:#fdf2f4; 
+    background-color:azure;
+    margin: 0;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    background-color: #222831;
+    overflow: hidden;
+    color: #EEEEEE;
+   
+}
+.level-score{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.question-body{
+    
+    padding: 3%;
+    background-color: #00ADB5;
+    color: #4c0519;
+    border-radius: 30%;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+    
+}
+
+.question{
+    display: flex;
+    justify-content: center;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.option{
+    
+    background-color: #393E46;
+    color: #EEEEEE;
+    border: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 33%; 
+    padding: 10px;
+}
+
+.next{
+    
+    background-color: #EEEEEE;
+    border: hidden;
+    display: flex;
+    justify-self: center;
+    /* margin-right: -350px; */
+    /* padding: 1%; */
+    font-size: 15px;
+    border-radius: 20px;
+    padding-left: 20px;
+    /* padding-right: 10px; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    width: 80px;
+}
+
+ .restart{
+
+   
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    
+    
+}
+
+.restart-btn{
+    
+    background-color: red;
+    color: #EEEEEE;
+    border: hidden;
+    border-radius: 10px;
+    height: 30px;
+    padding: 10px;
+    
+}
