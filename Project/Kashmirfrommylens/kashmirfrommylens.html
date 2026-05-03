@@ -175,6 +175,8 @@
 
 
 
+let interval;   // global timer
+
 const questionE1 = document.getElementById('question');
 const optionBtns = document.querySelectorAll(".option")
 
@@ -235,12 +237,11 @@ function NextQuestion(){
 
 function getQuestions(){
 
-
   const shuffled = [...questions].sort(()=> Math.random() - 0.5);
   return shuffled.slice(0,10)
 }
 
-const quizQuestions = getQuestions()
+let quizQuestions = getQuestions()
 
 console.log(quizQuestions);
 
@@ -252,9 +253,11 @@ let time = 2;
 
 function timeTic(){
 // clearInterval(interval);
+
+clearInterval(interval); 
   time = 5;
   
-  const interval = setInterval(
+   interval = setInterval(
     ()=>{
       tictic.innerText =  `Timer: ${time}`;
       time --;
@@ -299,6 +302,29 @@ optionBtns.forEach((btn) => {
 
   });
 });
+
+
+const nextBtns = document.querySelector(".next")
+nextBtns.addEventListener("click", ()=>{
+  clearInterval(interval); 
+  NextQuestion()
+})
+
+quizQuestions = getQuestions();
+
+const restartBtns = document.querySelector(".restart-btn")
+restartBtns.addEventListener("click", ()=>{
+  clearInterval(interval); 
+  currentIndex = 0
+  score = 2;
+time = 5;
+  // getQuestions()
+
+  quizQuestions = getQuestions();
+
+  loadQuestion();
+})
+
 
   loadQuestion()
 
