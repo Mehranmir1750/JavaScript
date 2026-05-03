@@ -276,18 +276,6 @@ clearInterval(interval);
 
 let score = 0;
 
-// document.addEventListener('click',
-// ()=>{
-
-//   setInterval(()=>{
-//     document.querySelectorAll('.option').style.backgroundColor ='green'
-    
-  
-
-//   },1000)
-  
-// }
-// )
 
 
 
@@ -317,6 +305,7 @@ restartBtns.addEventListener("click", ()=>{
   clearInterval(interval); 
   currentIndex = 0
   score = 2;
+  updateScore();
 time = 5;
   // getQuestions()
 
@@ -325,6 +314,13 @@ time = 5;
   loadQuestion();
 })
 
+
+
+const scoreUser = document.querySelector('.score');
+
+function updateScore(){
+  scoreUser.innerText = `Score:${score}`
+}
 
   loadQuestion()
 
