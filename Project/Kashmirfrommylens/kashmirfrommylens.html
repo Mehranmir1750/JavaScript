@@ -183,6 +183,15 @@ let currentIndex = 0;
 
 function loadQuestion(){
 
+
+  // document.querySelector('.option').style.backgroundColor ='#393E46'
+
+optionBtns.forEach(btn => {
+  btn.style.backgroundColor = "#393E46";
+});
+
+    
+
       const currentQuestion = quizQuestions[currentIndex]
       console.log(currentQuestion);
  
@@ -190,7 +199,10 @@ function loadQuestion(){
 
 
       optionBtns.forEach((btn,index) => {
-      btn.innerText = currentQuestion.options[index];
+        
+        btn.innerText = currentQuestion.options[index];
+
+        
 
       });
 
@@ -203,13 +215,15 @@ function loadQuestion(){
 
 
 function NextQuestion(){
+
+  
    currentIndex++;
 
   if(currentIndex < quizQuestions.length){
     loadQuestion();
   } else {
     // questionE1.innerText = "Quiz finished!";
-    document.getElementsByClassName("question-body").innerText = "Quiz Finished!"
+    document.querySelector(".question-body").innerText = "Quiz Finished!"
   }
 }
 
@@ -220,6 +234,8 @@ function NextQuestion(){
 
 
 function getQuestions(){
+
+
   const shuffled = [...questions].sort(()=> Math.random() - 0.5);
   return shuffled.slice(0,10)
 }
@@ -253,6 +269,36 @@ function timeTic(){
     }
     },1000)
 }
+
+
+let score = 0;
+
+// document.addEventListener('click',
+// ()=>{
+
+//   setInterval(()=>{
+//     document.querySelectorAll('.option').style.backgroundColor ='green'
+    
+  
+
+//   },1000)
+  
+// }
+// )
+
+
+
+optionBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+
+    // reset all buttons first
+    optionBtns.forEach(b => b.style.backgroundColor = "#393E46");
+
+    // change clicked button color
+    this.style.backgroundColor = "green";
+
+  });
+});
 
   loadQuestion()
 
