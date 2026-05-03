@@ -9,13 +9,13 @@
 <body class="body">
 
   <div class="navbar">
-    <h1 class="nav-h1">Quizora</h1>
+    <h1 class="nav-h1">KashurChukha</h1>
   </div>
 
   <div class="level-score">
     <h3 class="level">Difficulty Level: Easy</h3>
     <h3 class="score">Score:0</h3>
-    <h3 class="timer"><b>Timer: 60</b></h3>
+    <h3 class="timer"><b>Timer: 30</b></h3>
   </div>
 
   <div class="question-body">
@@ -39,157 +39,1916 @@
 
 <script>
 
- const questions = [
+const questions = [
 
-  // 🔬 Science
+  // 🏔️ Geography
   {
-    category: "Science",
-    question: "What is the chemical formula of sulfuric acid?",
-    options: ["H2SO3", "H2SO4", "HCl", "HNO3"],
-    answer: "H2SO4"
+    category: "Kashmir Geography",
+    question: "Which lake in Kashmir is known for houseboats?",
+    options: ["Wular Lake", "Dal Lake", "Manasbal Lake", "Nigeen Lake"],
+    answer: "Dal Lake"
   },
-
-  // ⚽ Sports
   {
-    category: "Sports",
-    question: "Which country has won the most FIFA World Cups?",
-    options: ["Germany", "Argentina", "Brazil", "France"],
-    answer: "Brazil"
+    category: "Kashmir Geography",
+    question: "Which is the deepest lake in Kashmir?",
+    options: ["Dal Lake", "Wular Lake", "Manasbal Lake", "Nigeen Lake"],
+    answer: "Manasbal Lake"
   },
-
-  // 📘 English
   {
-    category: "English",
-    question: "Choose the correct synonym of 'Meticulous':",
-    options: ["Careless", "Precise", "Lazy", "Rough"],
-    answer: "Precise"
+    category: "Kashmir Geography",
+    question: "Which river originates from Verinag?",
+    options: ["Indus", "Chenab", "Jhelum", "Ravi"],
+    answer: "Jhelum"
   },
-
-  // ➗ Maths
   {
-    category: "Maths",
-    question: "What is the value of 12 × 8 + 6 ÷ 2?",
-    options: ["102", "99", "100", "96"],
-    answer: "99"
+    category: "Kashmir Geography",
+    question: "Which valley is known as 'Mini Switzerland' of Kashmir?",
+    options: ["Gulmarg", "Pahalgam", "Sonamarg", "Kupwara"],
+    answer: "Gulmarg"
   },
-
-  // ⚙️ Engineering
   {
-    category: "Engineering",
-    question: "Which material is commonly used for making electrical wires?",
-    options: ["Iron", "Copper", "Aluminum", "Steel"],
-    answer: "Copper"
+    category: "Kashmir Geography",
+    question: "Which district is famous for apple production?",
+    options: ["Kupwara", "Baramulla", "Shopian", "Kargil"],
+    answer: "Shopian"
   },
 
   // 📜 History
   {
+    category: "Kashmir History",
+    question: "Who wrote Rajatarangini?",
+    options: ["Kalhana", "Amir Khusro", "Al-Biruni", "Firdausi"],
+    answer: "Kalhana"
+  },
+  {
+    category: "Kashmir History",
+    question: "Which ruler built Shalimar Bagh?",
+    options: ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"],
+    answer: "Jahangir"
+  },
+  {
+    category: "Kashmir History",
+    question: "Kashmir was annexed by which empire in 1586?",
+    options: ["British", "Mughal", "Sikh", "Afghan"],
+    answer: "Mughal"
+  },
+  {
+    category: "Kashmir History",
+    question: "Which dynasty ruled Kashmir before Mughals?",
+    options: ["Dogra", "Sikh", "Afghan", "Maurya"],
+    answer: "Afghan"
+  },
+  {
+    category: "Kashmir History",
+    question: "Who founded the Dogra rule in Jammu and Kashmir?",
+    options: ["Gulab Singh", "Hari Singh", "Ranbir Singh", "Pratap Singh"],
+    answer: "Gulab Singh"
+  },
+
+  // 🗣️ Language
+  {
+    category: "Kashmiri Language",
+    question: "Kashmiri language belongs to which language family?",
+    options: ["Dravidian", "Indo-Aryan", "Sino-Tibetan", "Turkic"],
+    answer: "Indo-Aryan"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "What does 'Shukriya' mean?",
+    options: ["Hello", "Goodbye", "Thank you", "Sorry"],
+    answer: "Thank you"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "What is 'Kya chuukh?' used for?",
+    options: ["Greeting", "Question", "Goodbye", "Thanks"],
+    answer: "Question"
+  },
+
+  // 🎭 Culture
+  {
+    category: "Kashmir Culture",
+    question: "What is the traditional attire worn in winters?",
+    options: ["Kurta", "Pheran", "Dhoti", "Sherwani"],
+    answer: "Pheran"
+  },
+  {
+    category: "Kashmir Culture",
+    question: "Which item is used to keep warm inside pheran?",
+    options: ["Heater", "Kangri", "Coal box", "Lamp"],
+    answer: "Kangri"
+  },
+  {
+    category: "Kashmir Culture",
+    question: "Rouf is a traditional?",
+    options: ["Dance", "Food", "Dress", "Song"],
+    answer: "Dance"
+  },
+
+  // 🍲 Food
+  {
+    category: "Kashmir Food",
+    question: "Which dish is part of Wazwan?",
+    options: ["Biryani", "Gushtaba", "Dosa", "Idli"],
+    answer: "Gushtaba"
+  },
+  {
+    category: "Kashmir Food",
+    question: "Kahwa is a type of?",
+    options: ["Coffee", "Tea", "Milk", "Juice"],
+    answer: "Tea"
+  },
+  {
+    category: "Kashmir Food",
+    question: "Which spice is widely grown in Pampore?",
+    options: ["Cardamom", "Pepper", "Saffron", "Clove"],
+    answer: "Saffron"
+  },
+
+  // 🕌 Heritage
+  {
+    category: "Kashmir Heritage",
+    question: "Hazratbal Shrine is famous for?",
+    options: ["Architecture", "Relic", "Festival", "Garden"],
+    answer: "Relic"
+  },
+  {
+    category: "Kashmir Heritage",
+    question: "Martand Sun Temple is located in?",
+    options: ["Srinagar", "Anantnag", "Kupwara", "Baramulla"],
+    answer: "Anantnag"
+  },
+
+  // 🧠 Aptitude (Kashmir themed)
+  {
+    category: "Kashmiri Aptitude",
+    question: "A tourist visits 4 gardens per day. In 3 days?",
+    options: ["10", "11", "12", "13"],
+    answer: "12"
+  },
+  {
+    category: "Kashmiri Aptitude",
+    question: "If 1 shawl costs 2000, cost of 3?",
+    options: ["4000", "5000", "6000", "7000"],
+    answer: "6000"
+  },
+
+  // 🏞️ Tourism
+  {
+    category: "Kashmir Tourism",
+    question: "Which place is known as 'Valley of Shepherds'?",
+    options: ["Gulmarg", "Pahalgam", "Sonamarg", "Kupwara"],
+    answer: "Pahalgam"
+  },
+  {
+    category: "Kashmir Tourism",
+    question: "Which garden is a Mughal Garden?",
+    options: ["Nishat Bagh", "Lal Bagh", "Cubbon Park", "Garden of Five Senses"],
+    answer: "Nishat Bagh"
+  },
+
+  // 🏔️ Geography / Places
+  {
+    category: "Kashmir Geography",
+    question: "Which lake is known as the 'Jewel in the crown of Kashmir'?",
+    options: ["Wular Lake", "Dal Lake", "Manasbal Lake", "Nigeen Lake"],
+    answer: "Dal Lake"
+  },
+  {
+    category: "Kashmir Geography",
+    question: "Which is the largest freshwater lake in Kashmir?",
+    options: ["Dal Lake", "Wular Lake", "Nigeen Lake", "Manasbal Lake"],
+    answer: "Wular Lake"
+  },
+  {
+    category: "Kashmir Geography",
+    question: "Gulmarg is famous for which activity?",
+    options: ["Desert safari", "Skiing", "Fishing", "Boating"],
+    answer: "Skiing"
+  },
+  {
+    category: "Kashmir Geography",
+    question: "Which river flows through Srinagar?",
+    options: ["Chenab", "Jhelum", "Ravi", "Beas"],
+    answer: "Jhelum"
+  },
+
+  // 📜 History
+  {
+    category: "Kashmir History",
+    question: "Who wrote the historical chronicle 'Rajatarangini'?",
+    options: ["Kalhana", "Abul Fazl", "Al-Biruni", "Amir Khusro"],
+    answer: "Kalhana"
+  },
+  {
+    category: "Kashmir History",
+    question: "Which Mughal emperor was especially fond of Kashmir?",
+    options: ["Babur", "Akbar", "Jahangir", "Aurangzeb"],
+    answer: "Jahangir"
+  },
+  {
+    category: "Kashmir History",
+    question: "The Mughal Gardens in Kashmir were mainly developed during whose reign?",
+    options: ["Shah Jahan", "Akbar", "Jahangir", "Humayun"],
+    answer: "Jahangir"
+  },
+
+  // 🗣️ Kashmiri Language
+  {
+    category: "Kashmiri Language",
+    question: "What is the common script used for writing Kashmiri today?",
+    options: ["Devanagari", "Perso-Arabic", "Roman", "Gurmukhi"],
+    answer: "Perso-Arabic"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "What does 'Adaab' mean in Kashmiri culture?",
+    options: ["Goodbye", "Hello/Respectful greeting", "Thank you", "Sorry"],
+    answer: "Hello/Respectful greeting"
+  },
+
+  // 🎭 Culture
+  {
+    category: "Kashmir Culture",
+    question: "What is the traditional Kashmiri attire for men called?",
+    options: ["Kurta", "Pheran", "Sherwani", "Achkan"],
+    answer: "Pheran"
+  },
+  {
+    category: "Kashmir Culture",
+    question: "Which traditional fire pot is used in Kashmir during winters?",
+    options: ["Chulha", "Kangri", "Angithi", "Tandoor"],
+    answer: "Kangri"
+  },
+
+  // 🍲 Food
+  {
+    category: "Kashmir Food",
+    question: "Which famous Kashmiri dish is made with lotus stem?",
+    options: ["Rogan Josh", "Nadur Yakhni", "Gushtaba", "Yakhni"],
+    answer: "Nadur Yakhni"
+  },
+  {
+    category: "Kashmir Food",
+    question: "Rogan Josh is primarily made from which ingredient?",
+    options: ["Chicken", "Mutton", "Fish", "Paneer"],
+    answer: "Mutton"
+  },
+
+  // 🕌 Religion & Heritage
+  {
+    category: "Kashmir Heritage",
+    question: "Hazratbal Shrine in Srinagar is located near which lake?",
+    options: ["Dal Lake", "Wular Lake", "Manasbal Lake", "Nigeen Lake"],
+    answer: "Dal Lake"
+  },
+  {
+    category: "Kashmir Heritage",
+    question: "Shankaracharya Temple is located in which city?",
+    options: ["Jammu", "Srinagar", "Anantnag", "Baramulla"],
+    answer: "Srinagar"
+  },
+
+  // 🌸 Nature
+  {
+    category: "Kashmir Nature",
+    question: "Which valley in Kashmir is famous for saffron cultivation?",
+    options: ["Gulmarg", "Pahalgam", "Sonamarg", "Pampore"],
+    answer: "Pampore"
+  },
+  {
+    category: "Kashmir Nature",
+    question: "Tulip Garden in Kashmir is located in which city?",
+    options: ["Jammu", "Srinagar", "Kupwara", "Anantnag"],
+    answer: "Srinagar"
+  },
+
+  // 🧠 Aptitude (Kashmir themed)
+  {
+    category: "Kashmiri Aptitude",
+    question: "If a shikara takes 20 minutes to cross Dal Lake, how long will it take to cross twice the distance at same speed?",
+    options: ["20 min", "30 min", "40 min", "50 min"],
+    answer: "40 min"
+  },
+  {
+    category: "Kashmiri Aptitude",
+    question: "A tourist visits 3 places in Srinagar each day. How many places in 5 days?",
+    options: ["10", "12", "15", "18"],
+    answer: "15"
+  },
+
+  // 🎨 Art & Handicrafts
+  {
+    category: "Kashmir Handicraft",
+    question: "Which Kashmiri craft is known for intricate embroidery on shawls?",
+    options: ["Pashmina", "Papier-mâché", "Kani Shawl", "Carpet"],
+    answer: "Kani Shawl"
+  },
+  {
+    category: "Kashmir Handicraft",
+    question: "Papier-mâché craft in Kashmir is mainly used to make?",
+    options: ["Clothes", "Furniture", "Decorative items", "Utensils"],
+    answer: "Decorative items"
+  },
+
+  // 🏞️ Tourism
+  {
+    category: "Kashmir Tourism",
+    question: "Which place is called 'Meadow of Gold'?",
+    options: ["Gulmarg", "Sonamarg", "Pahalgam", "Kupwara"],
+    answer: "Sonamarg"
+  },
+  {
+    category: "Kashmir Tourism",
+    question: "Betaab Valley is located near which place?",
+    options: ["Srinagar", "Gulmarg", "Pahalgam", "Baramulla"],
+    answer: "Pahalgam"
+  },
+
+  // 🏔️ Geography / Places
+  {
+    category: "Kashmir Geography",
+    question: "Nigeen Lake is located near which city?",
+    options: ["Anantnag", "Srinagar", "Baramulla", "Kupwara"],
+    answer: "Srinagar"
+  },
+  {
+    category: "Kashmir Geography",
+    question: "Which pass connects Srinagar with Ladakh?",
+    options: ["Rohtang Pass", "Zoji La", "Nathu La", "Khardung La"],
+    answer: "Zoji La"
+  },
+  {
+    category: "Kashmir Geography",
+    question: "Which district is known for Lolab Valley?",
+    options: ["Kupwara", "Pulwama", "Shopian", "Ganderbal"],
+    answer: "Kupwara"
+  },
+  {
+    category: "Kashmir Geography",
+    question: "Which river is a tributary of the Jhelum in Kashmir?",
+    options: ["Lidder", "Beas", "Ravi", "Teesta"],
+    answer: "Lidder"
+  },
+  {
+    category: "Kashmir Geography",
+    question: "Which hill station is famous for meadows and gondola rides?",
+    options: ["Pahalgam", "Sonamarg", "Gulmarg", "Yusmarg"],
+    answer: "Gulmarg"
+  },
+
+  // 📜 History
+  {
+    category: "Kashmir History",
+    question: "Which Sikh ruler took control of Kashmir in 1819?",
+    options: ["Ranjit Singh", "Hari Singh", "Gulab Singh", "Pratap Singh"],
+    answer: "Ranjit Singh"
+  },
+  {
+    category: "Kashmir History",
+    question: "Treaty of Amritsar (1846) transferred Kashmir to which ruler?",
+    options: ["Ranbir Singh", "Gulab Singh", "Hari Singh", "Pratap Singh"],
+    answer: "Gulab Singh"
+  },
+  {
+    category: "Kashmir History",
+    question: "Which Mughal emperor described Kashmir as 'Paradise on Earth'?",
+    options: ["Akbar", "Jahangir", "Shah Jahan", "Babur"],
+    answer: "Jahangir"
+  },
+  {
+    category: "Kashmir History",
+    question: "Which ancient temple ruins are associated with Surya worship?",
+    options: ["Shankaracharya", "Martand", "Avantipur", "Sharika"],
+    answer: "Martand"
+  },
+  {
+    category: "Kashmir History",
+    question: "Avantipur ruins were built by which king?",
+    options: ["Lalitaditya", "Avantivarman", "Ashoka", "Harsha"],
+    answer: "Avantivarman"
+  },
+
+  // 🗣️ Language
+  {
+    category: "Kashmiri Language",
+    question: "What does 'Khodayas Hawale' mean?",
+    options: ["Hello", "Take care/Goodbye", "Thank you", "Sorry"],
+    answer: "Take care/Goodbye"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "What does 'Me chuukh theek' convey?",
+    options: ["I am fine", "I am hungry", "I am tired", "I am late"],
+    answer: "I am fine"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "Which day-to-day greeting shows respect in Kashmiri culture?",
+    options: ["Namaste", "Adaab", "Hello", "Hi"],
+    answer: "Adaab"
+  },
+
+  // 🎭 Culture
+  {
+    category: "Kashmir Culture",
+    question: "Which traditional footwear is worn with pheran?",
+    options: ["Jutti", "Peshawari", "Gumboots", "Sandals"],
+    answer: "Peshawari"
+  },
+  {
+    category: "Kashmir Culture",
+    question: "Which festival marks the beginning of spring in Kashmir?",
+    options: ["Navreh", "Diwali", "Holi", "Eid"],
+    answer: "Navreh"
+  },
+  {
+    category: "Kashmir Culture",
+    question: "What is 'Samovar' used for?",
+    options: ["Cooking rice", "Brewing tea", "Storing water", "Heating room"],
+    answer: "Brewing tea"
+  },
+
+  // 🍲 Food
+  {
+    category: "Kashmir Food",
+    question: "Which Kashmiri dish is yogurt-based gravy with meat?",
+    options: ["Yakhni", "Rogan Josh", "Gushtaba", "Tabak Maaz"],
+    answer: "Yakhni"
+  },
+  {
+    category: "Kashmir Food",
+    question: "Tabak Maaz is primarily made from?",
+    options: ["Chicken", "Fish", "Lamb ribs", "Paneer"],
+    answer: "Lamb ribs"
+  },
+  {
+    category: "Kashmir Food",
+    question: "Which bread is commonly eaten with Kashmiri tea?",
+    options: ["Naan", "Kulcha", "Girda", "Roti"],
+    answer: "Girda"
+  },
+
+  // 🎨 Handicrafts
+  {
+    category: "Kashmir Handicraft",
+    question: "Pashmina is made from the wool of which animal?",
+    options: ["Sheep", "Yak", "Goat", "Camel"],
+    answer: "Goat"
+  },
+  {
+    category: "Kashmir Handicraft",
+    question: "Kashmiri carpets are known for?",
+    options: ["Plastic weave", "Silk/wool weave", "Cotton knit", "Jute weave"],
+    answer: "Silk/wool weave"
+  },
+  {
+    category: "Kashmir Handicraft",
+    question: "Walnut wood carving is famous in which region?",
+    options: ["Punjab", "Kashmir", "Rajasthan", "Gujarat"],
+    answer: "Kashmir"
+  },
+
+  // 🏞️ Tourism
+  {
+    category: "Kashmir Tourism",
+    question: "Which place is known as 'Valley of Flowers' in Kashmir?",
+    options: ["Yusmarg", "Gulmarg", "Sonamarg", "Pahalgam"],
+    answer: "Yusmarg"
+  },
+  {
+    category: "Kashmir Tourism",
+    question: "Which park in Srinagar is Asia’s largest tulip garden?",
+    options: ["Shalimar", "Nishat", "Indira Gandhi Tulip Garden", "Chashme Shahi"],
+    answer: "Indira Gandhi Tulip Garden"
+  },
+  {
+    category: "Kashmir Tourism",
+    question: "Which valley is associated with the Amarnath Yatra route?",
+    options: ["Lolab", "Betaab", "Pahalgam", "Gurez"],
+    answer: "Pahalgam"
+  },
+
+  // 🧠 Aptitude (Kashmir themed)
+  {
+    category: "Kashmiri Aptitude",
+    question: "A shikara ride costs 300 per hour. Cost for 3 hours?",
+    options: ["600", "700", "800", "900"],
+    answer: "900"
+  },
+  {
+    category: "Kashmiri Aptitude",
+    question: "If 5 tourists share 10 apples equally, each gets?",
+    options: ["1", "2", "3", "4"],
+    answer: "2"
+  },
+  {
+    category: "Kashmiri Aptitude",
+    question: "A shop sells 4 shawls per day. In 7 days?",
+    options: ["24", "26", "28", "30"],
+    answer: "28"
+  },
+
+  // 🌿 Nature / Wildlife
+  {
+    category: "Kashmir Nature",
+    question: "Dachigam National Park is known for which animal?",
+    options: ["Tiger", "Snow Leopard", "Hangul", "Elephant"],
+    answer: "Hangul"
+  },
+  {
+    category: "Kashmir Nature",
+    question: "Which tree is widely seen in Kashmir avenues?",
+    options: ["Neem", "Chinar", "Banyan", "Palm"],
+    answer: "Chinar"
+  },
+  {
+    category: "Kashmir Nature",
+    question: "Which season sees saffron flowers bloom in Kashmir?",
+    options: ["Spring", "Summer", "Autumn", "Winter"],
+    answer: "Autumn"
+  },
+
+  // 🕌 Heritage
+  {
+    category: "Kashmir Heritage",
+    question: "Which shrine is located on the banks of Jhelum in Srinagar?",
+    options: ["Hazratbal", "Jamia Masjid", "Charar-e-Sharif", "Kheer Bhawani"],
+    answer: "Jamia Masjid"
+  },
+  {
+    category: "Kashmir Heritage",
+    question: "Kheer Bhawani temple is located in which place?",
+    options: ["Pahalgam", "Tulmulla", "Anantnag", "Baramulla"],
+    answer: "Tulmulla"
+  },
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🏔️ KASHMIR GEOGRAPHY & PLACES
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  {
+    category: "Geography",
+    question: "What is the summer capital of Jammu & Kashmir?",
+    options: ["Jammu", "Srinagar", "Leh", "Anantnag"],
+    answer: "Srinagar"
+  },
+  {
+    category: "Geography",
+    question: "Dal Lake is located in which city of Kashmir?",
+    options: ["Jammu", "Anantnag", "Srinagar", "Baramulla"],
+    answer: "Srinagar"
+  },
+  {
+    category: "Geography",
+    question: "Which is the largest lake in Jammu & Kashmir?",
+    options: ["Dal Lake", "Wular Lake", "Manasbal Lake", "Nagin Lake"],
+    answer: "Wular Lake"
+  },
+  {
+    category: "Geography",
+    question: "Wular Lake is located in which district?",
+    options: ["Srinagar", "Baramulla", "Bandipora", "Kupwara"],
+    answer: "Bandipora"
+  },
+  {
+    category: "Geography",
+    question: "Which valley in Kashmir is famous for tulip gardens?",
+    options: ["Lidder Valley", "Lolab Valley", "Kashmir Valley", "Sind Valley"],
+    answer: "Kashmir Valley"
+  },
+  {
+    category: "Geography",
+    question: "The famous Mughal Garden 'Shalimar Bagh' is situated on the banks of which lake?",
+    options: ["Wular Lake", "Manasbal Lake", "Dal Lake", "Anchar Lake"],
+    answer: "Dal Lake"
+  },
+  {
+    category: "Geography",
+    question: "Gulmarg is located in which district of Kashmir?",
+    options: ["Srinagar", "Baramulla", "Kupwara", "Anantnag"],
+    answer: "Baramulla"
+  },
+  {
+    category: "Geography",
+    question: "Which mountain pass connects Kashmir Valley with Ladakh?",
+    options: ["Banihal Pass", "Zoji La", "Burzil Pass", "Sinthan Top"],
+    answer: "Zoji La"
+  },
+  {
+    category: "Geography",
+    question: "The Jhelum River originates from which spring in Kashmir?",
+    options: ["Verinag", "Achabal", "Kokernag", "Martand"],
+    answer: "Verinag"
+  },
+  {
+    category: "Geography",
+    question: "Pahalgam is situated on the banks of which river?",
+    options: ["Jhelum", "Sindh", "Lidder", "Vishav"],
+    answer: "Lidder"
+  },
+  {
+    category: "Geography",
+    question: "Which is the highest peak in the Pir Panjal range?",
+    options: ["Tatakuti", "Sunset Peak", "Bramsar", "Apharwat"],
+    answer: "Tatakuti"
+  },
+  {
+    category: "Geography",
+    question: "Sonamarg is located in which district?",
+    options: ["Srinagar", "Baramulla", "Ganderbal", "Kargil"],
+    answer: "Ganderbal"
+  },
+  {
+    category: "Geography",
+    question: "The famous Betaab Valley is near which town?",
+    options: ["Gulmarg", "Sonamarg", "Pahalgam", "Yusmarg"],
+    answer: "Pahalgam"
+  },
+  {
+    category: "Geography",
+    question: "Which tunnel connects Jammu to Srinagar through the Banihal Pass?",
+    options: ["Jawahar Tunnel", "Banihal Tunnel", "Qazigund Tunnel", "Banihal Qazigund Tunnel"],
+    answer: "Jawahar Tunnel"
+  },
+  {
+    category: "Geography",
+    question: "Dachigam National Park is located near which city?",
+    options: ["Jammu", "Srinagar", "Anantnag", "Baramulla"],
+    answer: "Srinagar"
+  },
+  {
+    category: "Geography",
+    question: "Which district of Kashmir is known as the 'Land of Rishis'?",
+    options: ["Srinagar", "Baramulla", "Anantnag", "Pulwama"],
+    answer: "Anantnag"
+  },
+  {
+    category: "Geography",
+    question: "Yusmarg meadow is located in which district?",
+    options: ["Srinagar", "Budgam", "Baramulla", "Shopian"],
+    answer: "Budgam"
+  },
+  {
+    category: "Geography",
+    question: "The famous Kolahoi Glacier is located in which valley?",
+    options: ["Sind Valley", "Lidder Valley", "Lolab Valley", "Gurez Valley"],
+    answer: "Lidder Valley"
+  },
+  {
+    category: "Geography",
+    question: "Gurez Valley is located in which district?",
+    options: ["Bandipora", "Kupwara", "Baramulla", "Ganderbal"],
+    answer: "Bandipora"
+  },
+  {
+    category: "Geography",
+    question: "Which is the winter capital of Jammu & Kashmir?",
+    options: ["Srinagar", "Leh", "Jammu", "Udhampur"],
+    answer: "Jammu"
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 📜 KASHMIRI HISTORY
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  {
     category: "History",
-    question: "Who was the first Emperor of the Maurya Empire?",
-    options: ["Ashoka", "Chandragupta Maurya", "Bindusara", "Harsha"],
-    answer: "Chandragupta Maurya"
+    question: "Who wrote the famous historical chronicle 'Rajatarangini'?",
+    options: ["Abhinava Gupta", "Kalhana", "Bilhana", "Somadeva"],
+    answer: "Kalhana"
   },
-
-  // 💻 Computer
   {
-    category: "Computer",
-    question: "Which of the following is NOT a JavaScript data type?",
-    options: ["String", "Boolean", "Float", "Undefined"],
-    answer: "Float"
+    category: "History",
+    question: "In which century was the Rajatarangini written?",
+    options: ["10th century", "11th century", "12th century", "13th century"],
+    answer: "12th century"
+  },
+  {
+    category: "History",
+    question: "Who was the founder of the Shah Mir dynasty in Kashmir?",
+    options: ["Shah Mir", "Sultan Sikandar", "Zain-ul-Abidin", "Yusuf Shah Chak"],
+    answer: "Shah Mir"
+  },
+  {
+    category: "History",
+    question: "Which Kashmiri ruler is known as 'Budshah' (the Great King)?",
+    options: ["Sultan Sikandar", "Zain-ul-Abidin", "Shah Mir", "Ali Shah"],
+    answer: "Zain-ul-Abidin"
+  },
+  {
+    category: "History",
+    question: "Who was the last ruler of the Chak dynasty in Kashmir?",
+    options: ["Yusuf Shah Chak", "Yakub Shah Chak", "Ali Shah Chak", "Hussain Shah Chak"],
+    answer: "Yakub Shah Chak"
+  },
+  {
+    category: "History",
+    question: "In which year did Akbar conquer Kashmir?",
+    options: ["1586", "1590", "1575", "1600"],
+    answer: "1586"
+  },
+  {
+    category: "History",
+    question: "Who founded the Dogra dynasty that ruled Kashmir?",
+    options: ["Ranjit Dev", "Gulab Singh", "Hari Singh", "Ranbir Singh"],
+    answer: "Gulab Singh"
+  },
+  {
+    category: "History",
+    question: "Under which treaty did Gulab Singh purchase Kashmir from the British?",
+    options: ["Treaty of Lahore", "Treaty of Amritsar", "Treaty of Simla", "Treaty of Peshawar"],
+    answer: "Treaty of Amritsar"
+  },
+  {
+    category: "History",
+    question: "In which year was the Treaty of Amritsar signed, giving Kashmir to Gulab Singh?",
+    options: ["1845", "1846", "1848", "1850"],
+    answer: "1846"
+  },
+  {
+    category: "History",
+    question: "Who was the last Dogra ruler of Kashmir?",
+    options: ["Ranbir Singh", "Pratap Singh", "Hari Singh", "Gulab Singh"],
+    answer: "Hari Singh"
+  },
+  {
+    category: "History",
+    question: "In which year did Maharaja Hari Singh sign the Instrument of Accession to India?",
+    options: ["1946", "1947", "1948", "1949"],
+    answer: "1947"
+  },
+  {
+    category: "History",
+    question: "Which Kashmiri mystic poet is known as 'Lalla Ded' or 'Lal Ded'?",
+    options: ["Habba Khatoon", "Rupa Bhawani", "Lalleshwari", "Arnimaal"],
+    answer: "Lalleshwari"
+  },
+  {
+    category: "History",
+    question: "Habba Khatoon was the queen of which Kashmiri ruler?",
+    options: ["Shah Mir", "Ali Shah Chak", "Yusuf Shah Chak", "Yakub Shah Chak"],
+    answer: "Yusuf Shah Chak"
+  },
+  {
+    category: "History",
+    question: "Which Mughal emperor is buried in Kashmir?",
+    options: ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"],
+    answer: "Jahangir"
+  },
+  {
+    category: "History",
+    question: "Where is the tomb of Mughal Emperor Jahangir located?",
+    options: ["Srinagar", "Shahdara Bagh, Lahore", "Agra", "Delhi"],
+    answer: "Shahdara Bagh, Lahore"
+  },
+  {
+    category: "History",
+    question: "Which ancient name was given to Kashmir in Sanskrit texts?",
+    options: ["Kashyapmira", "Kasmira", "Sharada Peeth", "Satidesh"],
+    answer: "Kasmira"
+  },
+  {
+    category: "History",
+    question: "Sultan Sikandar of Kashmir is controversially known by which title?",
+    options: ["Budshah", "But-Shikan", "Ghazi", "Badshah"],
+    answer: "But-Shikan"
+  },
+  {
+    category: "History",
+    question: "The Martand Sun Temple was built by which ruler?",
+    options: ["Ashoka", "Lalitaditya Muktapida", "Chandrapida", "Pravarasena II"],
+    answer: "Lalitaditya Muktapida"
+  },
+  {
+    category: "History",
+    question: "In which district is the ruins of the Martand Sun Temple located?",
+    options: ["Srinagar", "Anantnag", "Pulwama", "Baramulla"],
+    answer: "Anantnag"
+  },
+  {
+    category: "History",
+    question: "Sheikh Mohammad Abdullah, known as 'Sher-e-Kashmir', was the first Prime Minister of which body?",
+    options: ["Kashmir State Council", "National Conference", "J&K Constituent Assembly", "J&K State Government"],
+    answer: "J&K State Government"
   },
 
-  // 🧩 Aptitude
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🗣️ KASHMIRI LANGUAGE & LITERATURE
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  {
+    category: "Kashmiri Language",
+    question: "Kashmiri language is also known by which native name?",
+    options: ["Koshur", "Kashmiri", "Dardi", "Shina"],
+    answer: "Koshur"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "Which script is primarily used for writing the Kashmiri language officially?",
+    options: ["Devanagari", "Sharada", "Perso-Arabic", "Roman"],
+    answer: "Perso-Arabic"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "The ancient script historically used for Kashmiri is called?",
+    options: ["Brahmi", "Sharada", "Kaithi", "Takri"],
+    answer: "Sharada"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "What does 'Wular' mean in Kashmiri?",
+    options: ["Blue water", "Great lake", "Big lake", "Shining water"],
+    answer: "Big lake"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "What is 'Namaskar' called in Kashmiri greeting?",
+    options: ["Salaam", "Adaab", "Zai Salaam", "As-salamu Alaykum"],
+    answer: "Zai Salaam"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "Lal Ded's poetic verses are called?",
+    options: ["Vakhs", "Shruks", "Lolyaak", "Kasida"],
+    answer: "Vakhs"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "Habba Khatoon's songs are called?",
+    options: ["Vakhs", "Lol", "Rouf", "Wanvun"],
+    answer: "Lol"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "What is the Kashmiri word for 'snow'?",
+    options: ["Saal", "Sheeng", "Barf", "Kath"],
+    answer: "Sheeng"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "What does 'Dal' mean in Kashmiri?",
+    options: ["Lake", "River", "Mountain", "Valley"],
+    answer: "Lake"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "Which language family does Kashmiri belong to?",
+    options: ["Dravidian", "Sino-Tibetan", "Indo-Aryan (Dardic)", "Austro-Asiatic"],
+    answer: "Indo-Aryan (Dardic)"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "What is a traditional Kashmiri song sung at weddings called?",
+    options: ["Rouf", "Wanvun", "Chakri", "Lol"],
+    answer: "Wanvun"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "Which famous Kashmiri poet wrote 'Gulrez'?",
+    options: ["Mahjoor", "Rasul Mir", "Abdul Ahad Azad", "Zinda Kaul"],
+    answer: "Mahjoor"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "Ghulam Ahmad Mahjoor is considered the national poet of Kashmir. What was his pen name?",
+    options: ["Mahjoor", "Azad", "Firdausi", "Zinda"],
+    answer: "Mahjoor"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "Rasul Mir is famous for which genre of Kashmiri poetry?",
+    options: ["Sufi poetry", "Love poetry (Ghazal)", "Epic poetry", "Devotional poetry"],
+    answer: "Love poetry (Ghazal)"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "What is 'Samavar' in Kashmiri culture?",
+    options: ["A traditional carpet", "A traditional samovar/kettle for Kahwa", "A musical instrument", "A headwear"],
+    answer: "A traditional samovar/kettle for Kahwa"
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🍽️ KASHMIRI FOOD & CULTURE
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  {
+    category: "Culture",
+    question: "What is the traditional Kashmiri multi-course feast called?",
+    options: ["Daawat", "Wazwan", "Mehfil", "Ziyafat"],
+    answer: "Wazwan"
+  },
+  {
+    category: "Culture",
+    question: "Which spice, produced in Kashmir, is the world's most expensive spice by weight?",
+    options: ["Cardamom", "Black pepper", "Saffron", "Vanilla"],
+    answer: "Saffron"
+  },
+  {
+    category: "Culture",
+    question: "The Kashmiri saffron is primarily grown in which area?",
+    options: ["Pahalgam", "Pampore", "Sopore", "Pulwama"],
+    answer: "Pampore"
+  },
+  {
+    category: "Culture",
+    question: "What is the traditional Kashmiri green tea called?",
+    options: ["Masala Chai", "Noon Chai", "Kahwa", "Sheer Chai"],
+    answer: "Kahwa"
+  },
+  {
+    category: "Culture",
+    question: "Noon Chai (Sheer Chai) gets its distinctive color from which ingredient?",
+    options: ["Turmeric", "Baking soda", "Saffron", "Green cardamom"],
+    answer: "Baking soda"
+  },
+  {
+    category: "Culture",
+    question: "What is the main ingredient in the Kashmiri dish 'Rogan Josh'?",
+    options: ["Chicken", "Fish", "Mutton", "Vegetables"],
+    answer: "Mutton"
+  },
+  {
+    category: "Culture",
+    question: "Which Kashmiri bread is baked in a traditional tandoor and eaten with Noon Chai?",
+    options: ["Naan", "Sheermal", "Kulcha", "Lavasa"],
+    answer: "Sheermal"
+  },
+  {
+    category: "Culture",
+    question: "What is 'Haakh' in Kashmiri cuisine?",
+    options: ["A type of fish", "Kashmiri collard greens", "A rice dish", "A sweet dessert"],
+    answer: "Kashmiri collard greens"
+  },
+  {
+    category: "Culture",
+    question: "The traditional Kashmiri fire pot used for warmth is called?",
+    options: ["Bukhari", "Kangri", "Tandoor", "Chulha"],
+    answer: "Kangri"
+  },
+  {
+    category: "Culture",
+    question: "What is the traditional Kashmiri embroidery known as?",
+    options: ["Chikankari", "Kashida", "Kantha", "Phulkari"],
+    answer: "Kashida"
+  },
+  {
+    category: "Culture",
+    question: "Which Kashmiri handicraft involves making shawls from the wool of Changthangi goats?",
+    options: ["Kani shawl", "Pashmina shawl", "Shahtoosh shawl", "Woolen shawl"],
+    answer: "Pashmina shawl"
+  },
+  {
+    category: "Culture",
+    question: "Kani shawl is woven using which tool?",
+    options: ["Needle", "Kani (wooden sticks)", "Loom", "Crochet hook"],
+    answer: "Kani (wooden sticks)"
+  },
+  {
+    category: "Culture",
+    question: "What is the traditional Kashmiri folk dance performed in a circle called?",
+    options: ["Rouf", "Bacha Nagma", "Dumhal", "Hafiza"],
+    answer: "Rouf"
+  },
+  {
+    category: "Culture",
+    question: "Dumhal dance is performed by which community of Kashmir?",
+    options: ["Kashmiri Pandits", "Wattal tribe", "Gujjars", "Bakerwal"],
+    answer: "Wattal tribe"
+  },
+  {
+    category: "Culture",
+    question: "Which Kashmiri instrument is a bowed string instrument similar to a violin?",
+    options: ["Rabab", "Santoor", "Saaz-e-Kashmir (Sarangi)", "Tumbaknari"],
+    answer: "Saaz-e-Kashmir (Sarangi)"
+  },
+  {
+    category: "Culture",
+    question: "The Kashmiri Santoor was popularised globally by which musician?",
+    options: ["Ghulam Mustafa Khan", "Shiv Kumar Sharma", "Zakir Hussain", "Bismillah Khan"],
+    answer: "Shiv Kumar Sharma"
+  },
+  {
+    category: "Culture",
+    question: "What is the traditional Kashmiri carpet weaving technique called?",
+    options: ["Gabba", "Namdah", "Knotted carpet weaving", "Sozni"],
+    answer: "Knotted carpet weaving"
+  },
+  {
+    category: "Culture",
+    question: "'Namdah' is a type of Kashmiri handicraft made from which material?",
+    options: ["Silk", "Cotton", "Felted wool", "Jute"],
+    answer: "Felted wool"
+  },
+  {
+    category: "Culture",
+    question: "The Kashmiri festival 'Shivratri' is locally known as?",
+    options: ["Herath", "Baisakhi", "Navreh", "Eid-ul-Fitr"],
+    answer: "Herath"
+  },
+  {
+    category: "Culture",
+    question: "Navreh is the Kashmiri Pandit New Year, based on which calendar?",
+    options: ["Gregorian", "Islamic Hijri", "Saptarishi calendar", "Bengali calendar"],
+    answer: "Saptarishi calendar"
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🌿 KASHMIR NATURE & WILDLIFE
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  {
+    category: "Nature",
+    question: "Which endangered species is the state animal of Jammu & Kashmir?",
+    options: ["Snow Leopard", "Hangul (Kashmir Stag)", "Black Bear", "Markhor"],
+    answer: "Hangul (Kashmir Stag)"
+  },
+  {
+    category: "Nature",
+    question: "Hangul is found primarily in which national park of Kashmir?",
+    options: ["Hemis National Park", "Kishtwar National Park", "Dachigam National Park", "Salim Ali National Park"],
+    answer: "Dachigam National Park"
+  },
+  {
+    category: "Nature",
+    question: "Which bird is the state bird of Jammu & Kashmir?",
+    options: ["Common Kingfisher", "Black-necked Crane", "Kashmir Flycatcher", "Black-necked Stork"],
+    answer: "Black-necked Crane"
+  },
+  {
+    category: "Nature",
+    question: "The Chinar tree, iconic to Kashmir, is also known as?",
+    options: ["Platanus orientalis", "Cedrus deodara", "Betula utilis", "Pinus wallichiana"],
+    answer: "Platanus orientalis"
+  },
+  {
+    category: "Nature",
+    question: "Which flower is the state flower of Jammu & Kashmir?",
+    options: ["Rose", "Lotus", "Rhododendron", "Saffron Crocus"],
+    answer: "Lotus"
+  },
+  {
+    category: "Nature",
+    question: "The Lidder River joins which main river of Kashmir?",
+    options: ["Jhelum", "Chenab", "Sindh", "Kishanganga"],
+    answer: "Jhelum"
+  },
+  {
+    category: "Nature",
+    question: "Which river is known as the 'Vitasta' in ancient texts and flows through Srinagar?",
+    options: ["Chenab", "Jhelum", "Indus", "Ravi"],
+    answer: "Jhelum"
+  },
+  {
+    category: "Nature",
+    question: "The world-famous Asia's largest tulip garden is located in Srinagar. What is its name?",
+    options: ["Nishat Bagh", "Shalimar Bagh", "Indira Gandhi Memorial Tulip Garden", "Chashme Shahi"],
+    answer: "Indira Gandhi Memorial Tulip Garden"
+  },
+  {
+    category: "Nature",
+    question: "Manasbal Lake, the deepest lake in Kashmir, is in which district?",
+    options: ["Srinagar", "Ganderbal", "Bandipora", "Baramulla"],
+    answer: "Ganderbal"
+  },
+  {
+    category: "Nature",
+    question: "Which forest tree, also called the 'God tree', is found abundantly in Kashmir's higher altitudes?",
+    options: ["Oak", "Deodar (Cedrus deodara)", "Pine", "Walnut"],
+    answer: "Deodar (Cedrus deodara)"
+  },
+  {
+    category: "Nature",
+    question: "Kashmiri walnut (Juglans regia) is famous for which product?",
+    options: ["Walnut oil only", "Walnut wood carving and nuts", "Walnut leaves for medicine", "Walnut resin"],
+    answer: "Walnut wood carving and nuts"
+  },
+  {
+    category: "Nature",
+    question: "The Alpather Lake near Gulmarg is famous for remaining frozen until which month?",
+    options: ["March", "April", "June", "August"],
+    answer: "June"
+  },
+  {
+    category: "Nature",
+    question: "Which pass in Kashmir is one of the highest motorable roads in the world?",
+    options: ["Zoji La", "Sinthan Top", "Mughal Road", "Razdan Pass"],
+    answer: "Zoji La"
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // ➗ KASHMIRI APTITUDE
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
   {
     category: "Aptitude",
-    question: "If a train travels 60 km in 1 hour, how far will it travel in 2.5 hours?",
-    options: ["120 km", "150 km", "140 km", "130 km"],
-    answer: "150 km"
+    question: "A Kashmiri trader buys a Pashmina shawl for ₹5,000 and sells it for ₹7,500. What is his profit percentage?",
+    options: ["40%", "50%", "45%", "35%"],
+    answer: "50%"
   },
-
-  // 🌍 General Knowledge
-  {
-    category: "GK",
-    question: "Which is the largest ocean on Earth?",
-    options: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
-    answer: "Pacific Ocean"
-  },
-
-  // 🧪 Science (logic)
-  {
-    category: "Science",
-    question: "Which gas is most abundant in Earth’s atmosphere?",
-    options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
-    answer: "Nitrogen"
-  },
-
-  // 💡 Reasoning
   {
     category: "Aptitude",
-    question: "Find the next number in the series: 2, 6, 12, 20, ?",
-    options: ["28", "30", "26", "24"],
-    answer: "30"
+    question: "A shikara covers Dal Lake in 30 minutes going one direction. If it returns in 20 minutes with the current, what is its speed ratio (against:with current)?",
+    options: ["2:3", "3:2", "1:2", "2:1"],
+    answer: "2:3"
+  },
+  {
+    category: "Aptitude",
+    question: "A Kashmiri carpet seller sold a carpet at 20% profit for ₹12,000. What was the cost price?",
+    options: ["₹9,600", "₹10,000", "₹9,000", "₹10,500"],
+    answer: "₹10,000"
+  },
+  {
+    category: "Aptitude",
+    question: "If saffron costs ₹2,50,000 per kg, what is the cost of 50 grams?",
+    options: ["₹12,000", "₹12,500", "₹11,500", "₹13,000"],
+    answer: "₹12,500"
+  },
+  {
+    category: "Aptitude",
+    question: "A tourist travels from Srinagar to Gulmarg (56 km) in 1 hour 24 minutes. What is the average speed in km/h?",
+    options: ["38", "40", "42", "45"],
+    answer: "40"
+  },
+  {
+    category: "Aptitude",
+    question: "A houseboat in Dal Lake earns ₹3,000 per day. In how many days will it earn ₹1,08,000?",
+    options: ["34", "36", "38", "40"],
+    answer: "36"
+  },
+  {
+    category: "Aptitude",
+    question: "If a Kashmiri apple orchard produces 450 kg per tree and there are 80 trees, what is the total production?",
+    options: ["35,000 kg", "36,000 kg", "34,500 kg", "37,000 kg"],
+    answer: "36,000 kg"
+  },
+  {
+    category: "Aptitude",
+    question: "A handicraft artisan completes 3 Kashida embroidery pieces in 9 days. How many days to complete 7 pieces?",
+    options: ["18", "21", "24", "27"],
+    answer: "21"
+  },
+  {
+    category: "Aptitude",
+    question: "Dal Lake covers approximately 18 sq km. If 1/3 is covered by lotus, how many sq km has lotus?",
+    options: ["5", "6", "7", "8"],
+    answer: "6"
+  },
+  {
+    category: "Aptitude",
+    question: "A Kashmiri wazwan has 36 dishes. If 1/4 are vegetarian and the rest are non-vegetarian, how many non-vegetarian dishes are there?",
+    options: ["24", "27", "26", "28"],
+    answer: "27"
+  },
+  {
+    category: "Aptitude",
+    question: "If Gulmarg receives 5 meters of snowfall in winter and Sonamarg receives 3.5 meters, what is the ratio?",
+    options: ["10:7", "7:5", "5:3", "2:1"],
+    answer: "10:7"
+  },
+  {
+    category: "Aptitude",
+    question: "A Kashmiri shawl seller has 240 shawls. He sells 40% on Monday. How many are left?",
+    options: ["120", "140", "144", "160"],
+    answer: "144"
+  },
+  {
+    category: "Aptitude",
+    question: "The temperature in Srinagar drops from 8°C to -4°C. What is the change in temperature?",
+    options: ["10°C", "11°C", "12°C", "13°C"],
+    answer: "12°C"
+  },
+  {
+    category: "Aptitude",
+    question: "A Kashmiri baker makes 12 Sheermal breads per hour. How many will he make in 6.5 hours?",
+    options: ["72", "74", "76", "78"],
+    answer: "78"
+  },
+  {
+    category: "Aptitude",
+    question: "If a houseboat owner rents his boat at ₹4,500 per night and gets 22 bookings in a month, what is his monthly income?",
+    options: ["₹95,000", "₹99,000", "₹98,000", "₹1,00,000"],
+    answer: "₹99,000"
   },
 
-  // 🖥️ Computer (logic)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🎓 KASHMIRI ARTS, EDUCATION & NOTABLE PEOPLE
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
   {
-    category: "Computer",
-    question: "What does 'HTTP' stand for?",
+    category: "Notable People",
+    question: "Which Kashmiri philosopher founded the Trika philosophy (Kashmir Shaivism)?",
+    options: ["Somadeva", "Vasugupta", "Abhinava Gupta", "Kalhana"],
+    answer: "Vasugupta"
+  },
+  {
+    category: "Notable People",
+    question: "Abhinava Gupta is known for his work in which field?",
+    options: ["Mathematics", "Astronomy", "Kashmir Shaivism and aesthetics", "Medicine"],
+    answer: "Kashmir Shaivism and aesthetics"
+  },
+  {
+    category: "Notable People",
+    question: "Who is known as the 'Nightingale of Kashmir'?",
+    options: ["Lal Ded", "Rupa Bhawani", "Habba Khatoon", "Arnimaal"],
+    answer: "Habba Khatoon"
+  },
+  {
+    category: "Notable People",
+    question: "Which Kashmiri scientist is known for his contributions to nuclear physics in India?",
+    options: ["Abdul Kalam", "M.S. Swaminathan", "A.N. Matto", "Bashir Ahmad Dabla"],
+    answer: "A.N. Matto"
+  },
+  {
+    category: "Notable People",
+    question: "The famous Bollywood actor and director Shashi Kapoor had connections to Kashmir. Which legendary Kashmiri heroine did he often act opposite?",
+    options: ["Nargis", "Zeenat Aman", "Shabana Azmi", "Waheeda Rehman"],
+    answer: "Nargis"
+  },
+  {
+    category: "Notable People",
+    question: "Which University is the oldest university in Jammu & Kashmir?",
+    options: ["NIT Srinagar", "University of Jammu", "University of Kashmir", "SKUAST"],
+    answer: "University of Kashmir"
+  },
+  {
+    category: "Notable People",
+    question: "The University of Kashmir is located in which area of Srinagar?",
+    options: ["Lal Chowk", "Hazratbal", "Rajbagh", "Jawahar Nagar"],
+    answer: "Hazratbal"
+  },
+  {
+    category: "Notable People",
+    question: "Which Kashmiri sufi saint is buried at the Hazratbal shrine?",
+    options: ["Sheikh Nooruddin", "Mir Syed Ali Hamdani", "Hazrat Muhammad (PBUH)", "Shah Hamadan"],
+    answer: "Mir Syed Ali Hamdani"
+  },
+  {
+    category: "Notable People",
+    question: "Sheikh Nooruddin Noorani (Nund Rishi), the patron saint of Kashmir, was born in which year approximately?",
+    options: ["1177", "1377", "1577", "1277"],
+    answer: "1377"
+  },
+  {
+    category: "Notable People",
+    question: "Which Kashmiri saint is associated with the famous shrine at Charar-e-Sharief?",
+    options: ["Mir Syed Ali Hamdani", "Sheikh Nooruddin Noorani", "Lal Ded", "Zain Shah Sahib"],
+    answer: "Sheikh Nooruddin Noorani"
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🏛️ KASHMIRI MONUMENTS & ARCHITECTURE
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  {
+    category: "Monuments",
+    question: "The Hazratbal shrine is located on the banks of which lake?",
+    options: ["Wular Lake", "Manasbal Lake", "Dal Lake", "Nagin Lake"],
+    answer: "Dal Lake"
+  },
+  {
+    category: "Monuments",
+    question: "Which Mughal garden in Srinagar is known for its terraced layout overlooking Dal Lake?",
+    options: ["Shalimar Bagh", "Nishat Bagh", "Chashme Shahi", "Pari Mahal"],
+    answer: "Nishat Bagh"
+  },
+  {
+    category: "Monuments",
+    question: "Chashme Shahi garden in Srinagar was built by which Mughal emperor?",
+    options: ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"],
+    answer: "Shah Jahan"
+  },
+  {
+    category: "Monuments",
+    question: "Pari Mahal (Palace of Fairies) in Srinagar was built by which Mughal prince?",
+    options: ["Prince Murad", "Prince Dara Shikoh", "Prince Salim", "Prince Khurram"],
+    answer: "Prince Dara Shikoh"
+  },
+  {
+    category: "Monuments",
+    question: "The ancient Shankaracharya Temple in Srinagar is located on which hill?",
+    options: ["Hari Parbat", "Takht-e-Suleiman", "Zabarwan Hill", "Makhdoom Sahib Hill"],
+    answer: "Takht-e-Suleiman"
+  },
+  {
+    category: "Monuments",
+    question: "Hari Parbat fort in Srinagar was primarily built during which reign?",
+    options: ["Mughal period", "Dogra period", "Afghan period", "Sikh period"],
+    answer: "Afghan period"
+  },
+  {
+    category: "Monuments",
+    question: "The famous Kheer Bhawani temple is dedicated to which goddess?",
+    options: ["Durga", "Saraswati", "Ragnya Devi (Bhairavi)", "Laxmi"],
+    answer: "Ragnya Devi (Bhairavi)"
+  },
+  {
+    category: "Monuments",
+    question: "In which district is the Amarnath cave temple located?",
+    options: ["Srinagar", "Anantnag", "Kulgam", "Pulwama"],
+    answer: "Anantnag"
+  },
+  {
+    category: "Monuments",
+    question: "At approximately what altitude is the Amarnath cave located?",
+    options: ["2,500 m", "3,888 m", "4,500 m", "3,000 m"],
+    answer: "3,888 m"
+  },
+  {
+    category: "Monuments",
+    question: "The Jama Masjid of Srinagar was originally built by which sultan?",
+    options: ["Zain-ul-Abidin", "Sultan Sikandar", "Shah Mir", "Sultan Qutb-ud-Din"],
+    answer: "Sultan Sikandar"
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🍎 KASHMIRI ECONOMY & AGRICULTURE
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  {
+    category: "Economy",
+    question: "Which district of Kashmir is most famous for apple cultivation?",
+    options: ["Baramulla", "Sopore", "Shopian", "Kupwara"],
+    answer: "Shopian"
+  },
+  {
+    category: "Economy",
+    question: "Sopore in Baramulla district is known as the 'Apple Town of Asia'. It is in which region?",
+    options: ["Kashmir Valley", "Jammu", "Ladakh", "Pir Panjal"],
+    answer: "Kashmir Valley"
+  },
+  {
+    category: "Economy",
+    question: "Kashmir produces approximately what percentage of India's total saffron?",
+    options: ["80%", "90%", "95%", "75%"],
+    answer: "90%"
+  },
+  {
+    category: "Economy",
+    question: "Which wood is most popularly used for walnut wood carving in Kashmir?",
+    options: ["Deodar", "Walnut (Juglans regia)", "Chinar", "Pine"],
+    answer: "Walnut (Juglans regia)"
+  },
+  {
+    category: "Economy",
+    question: "The Kashmiri Pashmina wool comes from which breed of goat?",
+    options: ["Cashmere goat", "Changthangi goat", "Merino goat", "Angora goat"],
+    answer: "Changthangi goat"
+  },
+  {
+    category: "Economy",
+    question: "Kashmir's famous 'Mushroom' variety grown locally is known as?",
+    options: ["Button mushroom", "Guchhi (Morel mushroom)", "Oyster mushroom", "Shiitake mushroom"],
+    answer: "Guchhi (Morel mushroom)"
+  },
+  {
+    category: "Economy",
+    question: "Which Kashmiri dry fruit is colloquially called 'Doon' in local markets?",
+    options: ["Almond", "Walnut", "Chestnut", "Pistachio"],
+    answer: "Walnut"
+  },
+  {
+    category: "Economy",
+    question: "Kashmir's tourism contributes significantly to the economy. Houseboats on Dal Lake are categorized into how many official categories by the government?",
+    options: ["3", "4", "5", "6"],
+    answer: "5"
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🧩 KASHMIRI REASONING & GK
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  {
+    category: "General Knowledge",
+    question: "Jammu & Kashmir became a Union Territory in which year?",
+    options: ["2018", "2019", "2020", "2021"],
+    answer: "2019"
+  },
+  {
+    category: "General Knowledge",
+    question: "After the reorganization in 2019, J&K was divided into how many Union Territories?",
+    options: ["2", "3", "4", "1"],
+    answer: "2"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which is the largest district by area in Jammu & Kashmir?",
+    options: ["Srinagar", "Leh", "Kargil", "Anantnag"],
+    answer: "Leh"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Siachen Glacier, the world's highest battlefield, is in which region of J&K?",
+    options: ["Kashmir Valley", "Jammu", "Ladakh", "Pir Panjal"],
+    answer: "Ladakh"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which Article of the Indian Constitution gave special status to J&K (now abrogated)?",
+    options: ["Article 356", "Article 370", "Article 371", "Article 352"],
+    answer: "Article 370"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Kishanganga River is known by which name in Pakistan?",
+    options: ["Jhelum", "Chenab", "Neelum", "Indus"],
+    answer: "Neelum"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which Kashmiri district is known for producing the best cricket bat willow?",
+    options: ["Anantnag", "Pulwama", "Baramulla", "Budgam"],
+    answer: "Anantnag"
+  },
+  {
+    category: "General Knowledge",
+    question: "The famous Mughal road connecting Shopian to Poonch passes through which forest area?",
+    options: ["Dachigam", "Kishtwar", "Hirpora Wildlife Sanctuary", "Hirpora"],
+    answer: "Hirpora Wildlife Sanctuary"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which annual fair is held at the Kheer Bhawani temple in Kashmir?",
+    options: ["Zyestha Ashtami fair", "Baisakhi fair", "Lohri fair", "Herath fair"],
+    answer: "Zyestha Ashtami fair"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Lolab Valley, known for its scenic beauty, is in which district?",
+    options: ["Bandipora", "Kupwara", "Baramulla", "Handwara"],
+    answer: "Kupwara"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which river flows through the Gurez Valley?",
+    options: ["Jhelum", "Kishanganga", "Sindh", "Lidder"],
+    answer: "Kishanganga"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Nagin Lake is connected to which larger lake?",
+    options: ["Wular Lake", "Manasbal Lake", "Dal Lake", "Anchar Lake"],
+    answer: "Dal Lake"
+  },
+  {
+    category: "General Knowledge",
+    question: "Kashmir's 'Lathe' is a traditional craft involving which material?",
+    options: ["Wood turning", "Copper work", "Papier-mâché", "Silver work"],
+    answer: "Wood turning"
+  },
+  {
+    category: "General Knowledge",
+    question: "What is the famous 'Kesar' producing district of Kashmir officially called?",
+    options: ["Pulwama", "Pampore", "Shopian", "Anantnag"],
+    answer: "Pulwama"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Sindh River originates from which glacier near Sonamarg?",
+    options: ["Kolahoi Glacier", "Machoi Glacier", "Zoji La glacier", "Thajiwas Glacier"],
+    answer: "Thajiwas Glacier"
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🖌️ KASHMIRI ARTS & CRAFTS (Extended)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  {
+    category: "Arts & Crafts",
+    question: "Papier-mâché craft in Kashmir is called?",
+    options: ["Sheen Kari", "Paper Kari", "Kar Khamb", "Khatamband"],
+    answer: "Paper Kari"
+  },
+  {
+    category: "Arts & Crafts",
+    question: "Khatamband is a traditional Kashmiri art form involving which material?",
+    options: ["Fabric", "Wood (ceiling panels)", "Paper", "Clay"],
+    answer: "Wood (ceiling panels)"
+  },
+  {
+    category: "Arts & Crafts",
+    question: "Sozni embroidery in Kashmir uses which type of stitch?",
+    options: ["Cross-stitch", "Chain stitch", "Fine needle work stitch", "Running stitch"],
+    answer: "Fine needle work stitch"
+  },
+  {
+    category: "Arts & Crafts",
+    question: "The copper work craft of Kashmir, where vessels are hammered and engraved, is known as?",
+    options: ["Thatheras", "Naqashi", "Copper Kari", "Tamba Kari"],
+    answer: "Thatheras"
+  },
+  {
+    category: "Arts & Crafts",
+    question: "Which Kashmiri craft involves creating intricate geometric patterns on silk or cotton using wax-resist dyeing?",
+    options: ["Kani weaving", "Batik", "Namda making", "Tilla Dozi"],
+    answer: "Batik"
+  },
+  {
+    category: "Arts & Crafts",
+    question: "Tilla Dozi is embroidery done with which material?",
+    options: ["Silk thread", "Gold and silver metallic thread", "Cotton thread", "Wool thread"],
+    answer: "Gold and silver metallic thread"
+  },
+  {
+    category: "Arts & Crafts",
+    question: "A 'Gabba' in Kashmiri craft is made from?",
+    options: ["New silk", "Recycled woolen cloth", "Cotton", "Leather"],
+    answer: "Recycled woolen cloth"
+  },
+  {
+    category: "Arts & Crafts",
+    question: "Which musical instrument is central to Kashmiri Sufi music (Sufiana Kalam)?",
+    options: ["Tumbaknari", "Rabab", "Santoor", "Saz"],
+    answer: "Santoor"
+  },
+  {
+    category: "Arts & Crafts",
+    question: "The 'Tumbaknari' is which type of instrument?",
+    options: ["String instrument", "Wind instrument", "Percussion (drum)", "Keyboard instrument"],
+    answer: "Percussion (drum)"
+  },
+  {
+    category: "Arts & Crafts",
+    question: "Kashmir's famous 'Chain Stitch' carpet rugs are made using which tool?",
+    options: ["Loom", "Aari (hooked needle)", "Kani stick", "Needle and thread"],
+    answer: "Aari (hooked needle)"
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🌐 KASHMIRI POLITICAL & ADMINISTRATIVE GK
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  {
+    category: "General Knowledge",
+    question: "How many districts are there in the Kashmir Division?",
+    options: ["8", "10", "12", "6"],
+    answer: "10"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which is the northernmost district of the Kashmir Valley?",
+    options: ["Baramulla", "Kupwara", "Bandipora", "Ganderbal"],
+    answer: "Kupwara"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Jawahar Tunnel connects which two towns?",
+    options: ["Srinagar and Jammu", "Banihal and Qazigund", "Ramban and Rampur", "Udhampur and Batote"],
+    answer: "Banihal and Qazigund"
+  },
+  {
+    category: "General Knowledge",
+    question: "In 2019, J&K was bifurcated into J&K UT and which other UT?",
+    options: ["Leh", "Kargil", "Ladakh", "Zanskar"],
+    answer: "Ladakh"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which Legislative Assembly was dissolved when J&K became a Union Territory in 2019?",
+    options: ["J&K National Assembly", "J&K State Legislature", "J&K Legislative Assembly", "J&K Constituent Assembly"],
+    answer: "J&K Legislative Assembly"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Kishanganga Hydroelectric Project is located in which district?",
+    options: ["Bandipora", "Kupwara", "Baramulla", "Budgam"],
+    answer: "Bandipora"
+  },
+  {
+    category: "General Knowledge",
+    question: "Srinagar International Airport is officially named after which leader?",
+    options: ["Sheikh Abdullah", "Mufti Mohammad Sayeed", "Bakshi Ghulam Mohammad", "Farooq Abdullah"],
+    answer: "Sheikh Abdullah"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which institution in Srinagar is known as 'NIT Srinagar'?",
     options: [
-      "Hyper Text Transfer Protocol",
-      "High Transfer Text Protocol",
-      "Hyperlink Transfer Process",
-      "Home Tool Transfer Protocol"
+      "National Institute of Technology Srinagar",
+      "National Innovation Technology Srinagar",
+      "National Infrastructure Tribunal",
+      "National Institute of Tourism"
     ],
-    answer: "Hyper Text Transfer Protocol"
+    answer: "National Institute of Technology Srinagar"
   },
-
-  // 📊 Maths (logic)
   {
-    category: "Maths",
-    question: "If x = 3, what is the value of 2x² + 5?",
-    options: ["23", "21", "25", "19"],
-    answer: "23"
+    category: "General Knowledge",
+    question: "The Srinagar-Leh Highway is also known as?",
+    options: ["NH 1", "NH 1D", "NH 44", "NH 701"],
+    answer: "NH 1D"
   },
-
-  // 🏏 Sports (India context)
   {
-    category: "Sports",
-    question: "Who is known as the 'God of Cricket'?",
-    options: ["Virat Kohli", "MS Dhoni", "Sachin Tendulkar", "Ricky Ponting"],
-    answer: "Sachin Tendulkar"
+    category: "General Knowledge",
+    question: "The famous Lal Chowk in Srinagar literally means?",
+    options: ["Red Market", "Red Square", "Red Crossing", "Red Bridge"],
+    answer: "Red Square"
   },
-
-  // 📖 English (grammar)
   {
-    category: "English",
-    question: "Choose the correct sentence:",
-    options: [
-      "She don’t like coffee",
-      "She doesn’t likes coffee",
-      "She doesn’t like coffee",
-      "She not like coffee"
-    ],
-    answer: "She doesn’t like coffee"
-  }
-
+    category: "General Knowledge",
+    question: "Which district of Kashmir is called the 'Rice Bowl of Kashmir'?",
+    options: ["Srinagar", "Anantnag", "Sopore", "Pulwama"],
+    answer: "Pulwama"
+  },
+  {
+    category: "General Knowledge",
+    question: "Char Chinar is an island in Dal Lake with how many Chinar trees?",
+    options: ["2", "3", "4", "5"],
+    answer: "4"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which Kashmiri delicacy is made from lotus stems?",
+    options: ["Dum Olav", "Nadroo Yakhni", "Rogan Josh", "Tabak Maaz"],
+    answer: "Nadroo Yakhni"
+  },
+  {
+    category: "General Knowledge",
+    question: "Tabak Maaz is a Kashmiri dish made from which part of mutton?",
+    options: ["Ribs", "Leg", "Brain", "Liver"],
+    answer: "Ribs"
+  },
+  {
+    category: "General Knowledge",
+    question: "The annual Shikara Festival on Dal Lake is organized in which season?",
+    options: ["Winter", "Summer", "Autumn", "Spring"],
+    answer: "Summer"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which Kashmiri town is known as the 'Mandi of Apple'?",
+    options: ["Shopian", "Sopore", "Handwara", "Pattan"],
+    answer: "Sopore"
+  },
+  {
+    category: "General Knowledge",
+    question: "The zero point in Sonamarg from where glaciers are visible is called?",
+    options: ["Thajiwas", "Zoji La", "Zero Bridge", "Alpather"],
+    answer: "Thajiwas"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which river is dammed to form the Wullar Lake?",
+    options: ["Sindh", "Lidder", "Jhelum", "Kishanganga"],
+    answer: "Jhelum"
+  },
+  {
+    category: "General Knowledge",
+    question: "The famous Kashmiri bread 'Girda' is typically eaten with?",
+    options: ["Rogan Josh", "Noon Chai", "Haakh", "Dum Olav"],
+    answer: "Noon Chai"
+  },
+  {
+    category: "General Knowledge",
+    question: "Kashmiri Pandit community celebrates 'Shivratri' which is locally known as?",
+    options: ["Navreh", "Herath", "Baisakhi", "Pann"],
+    answer: "Herath"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which river separates Srinagar city into two halves?",
+    options: ["Sindh", "Jhelum", "Lidder", "Kishanganga"],
+    answer: "Jhelum"
+  },
+  {
+    category: "General Knowledge",
+    question: "The historic Zero Bridge in Srinagar crosses which river?",
+    options: ["Sindh", "Jhelum", "Lidder", "Vishav"],
+    answer: "Jhelum"
+  },
+  {
+    category: "General Knowledge",
+    question: "Anantnag is also locally known by which name?",
+    options: ["Islamabad", "Anatnag", "Anantnagar", "South Kashmir"],
+    answer: "Islamabad"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which famous Kashmiri saint saint-poet wrote the 'Lallavaakh'?",
+    options: ["Habba Khatoon", "Lal Ded", "Rupa Bhawani", "Arnimaal"],
+    answer: "Lal Ded"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Mughal Emperor Akbar visited Kashmir for the first time in which year?",
+    options: ["1580", "1586", "1589", "1592"],
+    answer: "1589"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which Kashmiri lake is a Ramsar Wetland site?",
+    options: ["Nagin Lake", "Manasbal Lake", "Wular Lake", "Anchar Lake"],
+    answer: "Wular Lake"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Kokernag springs in Anantnag are famous for which fish?",
+    options: ["Catfish", "Rohu", "Trout", "Salmon"],
+    answer: "Trout"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Botanical Garden in Srinagar is located near which famous landmark?",
+    options: ["Dal Lake / Chashme Shahi", "Hazratbal", "Lal Chowk", "Hari Parbat"],
+    answer: "Dal Lake / Chashme Shahi"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which annual festival celebrates the blooming of tulips in Srinagar?",
+    options: ["Srinagar Flower Festival", "Tulip Festival", "Kashmir Spring Festival", "Dal Festival"],
+    answer: "Tulip Festival"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Sindh River joins the Jhelum near which town?",
+    options: ["Sopore", "Srinagar", "Shadipora (Sumbal)", "Baramulla"],
+    answer: "Shadipora (Sumbal)"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which famous Kashmiri dish is made from turnips?",
+    options: ["Dum Olav", "Monj Haakh", "Nadroo Yakhni", "Rogan Josh"],
+    answer: "Monj Haakh"
+  },
+  {
+    category: "General Knowledge",
+    question: "The traditional Kashmiri wooden house architecture is known as?",
+    options: ["Dhajji Dewari", "Taq style", "Both Dhajji Dewari and Taq", "Haveli style"],
+    answer: "Both Dhajji Dewari and Taq"
+  },
+  {
+    category: "General Knowledge",
+    question: "Achabal garden in Anantnag was built by which Mughal ruler?",
+    options: ["Akbar", "Jahangir", "Nur Jahan", "Shah Jahan"],
+    answer: "Nur Jahan"
+  },
+  {
+    category: "General Knowledge",
+    question: "The 'Verinag Spring', source of Jhelum, was developed into a garden by which Mughal emperor?",
+    options: ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"],
+    answer: "Jahangir"
+  },
+  {
+    category: "General Knowledge",
+    question: "What is the approximate length of Dal Lake from north to south?",
+    options: ["5 km", "7.44 km", "10 km", "12 km"],
+    answer: "7.44 km"
+  },
+  {
+    category: "General Knowledge",
+    question: "The Kashmiri sport of rowing on Dal Lake is traditionally done on which boat?",
+    options: ["Gondola", "Shikara", "Doonga", "Houseboat"],
+    answer: "Shikara"
+  },
+  {
+    category: "General Knowledge",
+    question: "Which town is called the 'Gateway to Kashmir Valley' on the Jammu-Srinagar highway?",
+    options: ["Ramban", "Banihal", "Qazigund", "Anantnag"],
+    answer: "Qazigund"
+  },
+  {
+    category: "Nature",
+    question: "The Dachigam National Park spans approximately how many square kilometers?",
+    options: ["81 sq km", "141 sq km", "180 sq km", "220 sq km"],
+    answer: "141 sq km"
+  },
+  {
+    category: "Nature",
+    question: "Which migratory birds famously winter on Kashmiri wetlands?",
+    options: ["Siberian Crane", "Bar-headed Goose", "Brahminy Duck", "All of these"],
+    answer: "All of these"
+  },
+  {
+    category: "History",
+    question: "Sufi saint Mir Syed Ali Hamdani came to Kashmir from which country?",
+    options: ["Iraq", "Iran (Persia)", "Turkey", "Afghanistan"],
+    answer: "Iran (Persia)"
+  },
+  {
+    category: "Aptitude",
+    question: "A Kashmiri farmer has 120 apple trees. Each tree gives 200 kg at ₹40 per kg. What is total revenue?",
+    options: ["₹8,40,000", "₹9,00,000", "₹9,60,000", "₹10,00,000"],
+    answer: "₹9,60,000"
+  },
+  {
+    category: "Culture",
+    question: "The Wazwan feast is traditionally served on a large shared dish called?",
+    options: ["Thaal", "Trami", "Dastarkhwan", "Sinia"],
+    answer: "Trami"
+  },
+  {
+    category: "Kashmiri Language",
+    question: "What does the word 'Gulmarg' literally mean?",
+    options: ["Flower path", "Meadow of flowers", "Rose garden", "Golden meadow"],
+    answer: "Meadow of flowers"
+  },
+  {
+    category: "Geography",
+    question: "The Zanskar River meets the Indus River near which town?",
+    options: ["Leh", "Nimmu", "Kargil", "Padum"],
+    answer: "Nimmu"
+  },
 ];
 
 
 
-let interval;   // global timer
+let interval;   
 
 const questionE1 = document.getElementById('question');
 const optionBtns = document.querySelectorAll(".option")
 
-
 let currentIndex = 0;
+
+const scoreUser = document.querySelector('.score');
+
+let quizQuestions = getQuestions()
+
+console.log(quizQuestions);
+
+const tictic = document.querySelector('.timer');
+
+let time = 30;
+
+let score = 0;
+
+optionBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+
+    currentQuestion = quizQuestions[currentIndex]
+    const correctAnswer = currentQuestion.answer;
+ 
+
+     optionBtns.forEach(b => b.disabled = true);
+
+      if(currentQuestion.answer == this.innerText){
+        score++
+        // optionBtns.forEach(b => b.style.backgroundColor = "#393E46");
+        this.style.backgroundColor = "green";
+        updateScore()
+       
+      }else{
+        // optionBtns.forEach(b => b.style.backgroundColor = "#393E46");
+        this.style.backgroundColor = "red";
+        
+      
+
+
+      optionBtns.forEach(b => {
+        if (b.innerText === correctAnswer) {
+          b.style.backgroundColor = "green";
+        }
+      });
+    }
+    
+
+    clearInterval(interval);
+
+    setTimeout(() => {
+      NextQuestion();
+    }, 1000);
+
+    
+    
+  });
+});
+
+
+const nextBtns = document.querySelector(".next")
+  nextBtns.addEventListener("click", ()=>{
+  clearInterval(interval); 
+  NextQuestion()
+  
+})
+
+quizQuestions = getQuestions();
+
+const restartBtns = document.querySelector(".restart-btn")
+
+  restartBtns.addEventListener("click",
+  ()=>{
+  clearInterval(interval); 
+  currentIndex = 0
+  score = 0;
+  
+  updateScore();
+  loadQuestion();
+
+  optionBtns.forEach(b => {
+    b.disabled = false;
+    b.style.backgroundColor = "#393E46";
+  });
+
+})
+
+
+
+
 
 function loadQuestion(){
 
-
-  // document.querySelector('.option').style.backgroundColor ='#393E46'
+  
 
 optionBtns.forEach(btn => {
   btn.style.backgroundColor = "#393E46";
+  btn.disabled = false;
 });
 
     
@@ -209,6 +1968,8 @@ optionBtns.forEach(btn => {
       });
 
       timeTic()
+
+      
   
 
     }
@@ -224,15 +1985,41 @@ function NextQuestion(){
   if(currentIndex < quizQuestions.length){
     loadQuestion();
   } else {
-    // questionE1.innerText = "Quiz finished!";
-    document.querySelector(".question-body").innerText = "Quiz Finished!"
+    const finalScore = document.querySelector(".question-body")
+
+    if (score >= 8) {
+      finalScore.style.backgroundColor = "green"
+  finalScore.innerHTML = `Your score is ${score} <br> Excellent! 🎉`;
+} 
+else if (score >= 5) {
+  finalScore.style.backgroundColor = "lightgreen"
+  finalScore.innerHTML = `Your score is ${score} <br> Good job 👍`;
+} 
+else {
+  finalScore.style.backgroundColor = "red"
+  finalScore.innerHTML = `Your score is ${score} <br> Try again 💪`;
+}
+
+
   }
 }
 
 
 
+function timeTic(){
 
-
+clearInterval(interval); 
+  time = 30;
+   interval = setInterval(
+    ()=>{
+      tictic.innerText =  `Timer: ${time}`;
+      time --;
+      if (time < 0) {
+      clearInterval(interval);
+      NextQuestion()
+    }
+    },1000)
+}
 
 
 function getQuestions(){
@@ -241,88 +2028,15 @@ function getQuestions(){
   return shuffled.slice(0,10)
 }
 
-let quizQuestions = getQuestions()
-
-console.log(quizQuestions);
-
-// const tictic = document.getElementsByClassName('timer');
-
-const tictic = document.querySelector('.timer');
-
-let time = 2;
-
-function timeTic(){
-// clearInterval(interval);
-
-clearInterval(interval); 
-  time = 5;
-  
-   interval = setInterval(
-    ()=>{
-      tictic.innerText =  `Timer: ${time}`;
-      time --;
-
-      if (time < 0) {
-      clearInterval(interval);
-      // tictic.innerText = "Time's up!";
-      // loadQuestion()
-      NextQuestion()
-      
-  
-    }
-    },1000)
-}
-
-
-let score = 0;
-
-
-
-
-optionBtns.forEach((btn) => {
-  btn.addEventListener("click", function () {
-
-    // reset all buttons first
-    optionBtns.forEach(b => b.style.backgroundColor = "#393E46");
-
-    // change clicked button color
-    this.style.backgroundColor = "green";
-
-  });
-});
-
-
-const nextBtns = document.querySelector(".next")
-nextBtns.addEventListener("click", ()=>{
-  clearInterval(interval); 
-  NextQuestion()
-})
-
-quizQuestions = getQuestions();
-
-const restartBtns = document.querySelector(".restart-btn")
-restartBtns.addEventListener("click", ()=>{
-  clearInterval(interval); 
-  currentIndex = 0
-  score = 2;
-  updateScore();
-time = 5;
-  // getQuestions()
-
-  quizQuestions = getQuestions();
-
-  loadQuestion();
-})
-
-
-
-const scoreUser = document.querySelector('.score');
 
 function updateScore(){
-  scoreUser.innerText = `Score:${score}`
-}
+    scoreUser.innerText = `Score:${score}`
+    }
+  
+  
+    
 
-  loadQuestion()
+    loadQuestion()
 
 
 </script>
